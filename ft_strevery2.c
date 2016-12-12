@@ -6,7 +6,7 @@
 /*   By: ewilliam <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/11 16:20:03 by ewilliam          #+#    #+#             */
-/*   Updated: 2016/12/11 16:20:24 by ewilliam         ###   ########.fr       */
+/*   Updated: 2016/12/11 17:23:58 by ewilliam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,15 @@ int	ft_strevery2(char **ar, int (*f)(char c))
 		return (0);
 	x = 0;
 	y = 0;
-	while (ar[y++])
+	while (ar[y])
 	{
-		while (ar[y][x++])
+		while (ar[y][x])
 		{
 			if (!f(ar[y][x]))
 				return (0);
+			x++;
 		}
+		y++;
 	}
 	return (1);
 }
