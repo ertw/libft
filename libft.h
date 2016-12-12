@@ -6,7 +6,7 @@
 /*   By: ewilliam <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/28 09:07:03 by ewilliam          #+#    #+#             */
-/*   Updated: 2016/12/09 16:59:56 by ewilliam         ###   ########.fr       */
+/*   Updated: 2016/12/11 16:26:54 by ewilliam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,4 +92,8 @@ int					ft_atoi(const char *str);
 int					ft_isprint(int c);
 void				*ft_memccpy(void *dst, const void *src, int c, size_t n);
 int					ft_chrcmp(const char c1, const char c2);
+int					ft_strevery(char *ar, int (*f)(char c));
+int					ft_strevery2(char **ar, int (*f)(char c));
+int					ft_strevery2i(char **ar, int (*f)(char c, int x, int y));
+int					ft_streveryi(char *ar, int (*f)(char c, int index));
 #endif
