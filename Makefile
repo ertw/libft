@@ -74,9 +74,7 @@ OFILES = \
 		ft_lstmap.o\
 		ft_chrcmp.o\
 		ft_strevery.o\
-		ft_streveryi.o\
-		ft_strevery2.o\
-		ft_strevery2i.o
+		ft_streveryi.o
 TEST_SRC = \
 		tests.c
 
@@ -158,8 +156,6 @@ $(NAME):
 	gcc ${CFLAGS} -c ft_chrcmp.c
 	gcc ${CFLAGS} -c ft_strevery.c
 	gcc ${CFLAGS} -c ft_streveryi.c
-	gcc ${CFLAGS} -c ft_strevery2.c
-	gcc ${CFLAGS} -c ft_strevery2i.c
 	ar rc ${NAME} ${OFILES}
 clean:
 	rm -f ${OFILES}
