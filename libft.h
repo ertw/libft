@@ -96,4 +96,5 @@ int					ft_strevery(char *ar, int (*f)(char c));
 int					ft_strevery2(char **ar, int (*f)(char c));
 int					ft_strevery2i(char **ar, int (*f)(char c, int x, int y));
 int					ft_streveryi(char *ar, int (*f)(char c, int index));
+char				*ft_strndup(const char *s1, size_t len);
 #endif
