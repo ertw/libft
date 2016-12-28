@@ -27,5 +27,5 @@ char	*ft_strndup(const char *s1, size_t n)
 		s2[len] = '\0';
 		return (s2);
 	}
-	return (NULL);	
+	return (NULL);
 }

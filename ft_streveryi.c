@@ -14,7 +14,7 @@ int	ft_streveryi(char *ar, int (*f)(char c, int index))
 {
 	int i;
 
-	if (!ar || ! f)
+	if (!ar || !f)
 		return (0);
 	i = 0;
 	while (ar[i])
