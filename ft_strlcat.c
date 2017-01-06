@@ -20,44 +20,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dlen = ft_strlen(dst);
 	slen = ft_strlen(src);
 	if (dlen >= size)
-		return (dlen + slen);
-	ft_strncat(dst, src, size - 1);
+	{
+		return (dlen + slen - 1);
+	}
+	ft_strncat(dst, src, size - dlen - 1);
 	return (dlen + slen);
 }
-
-
-
-//	size_t	dlen;
-//	size_t	slen;
-//
-//	dlen = ft_strlen(dst);
-//	slen = ft_strlen(src);
-//	if (dlen == size)
-//		return (dlen + slen);
-//	ft_strncat(dst, src, size != dlen + slen + 1 ? dlen : size - dlen);
-//	return (dlen + slen);
-
-//	size_t	dlen;
-//	size_t	available_buffer;
-//	size_t	n;
-//
-//	n = size;
-//	dlen = 0;
-//	while (*dst && n--)
-//	{
-//		dlen++;
-//		dst++;
-//	}
-//	available_buffer = size - dlen - 1;
-//	if (*dst)
-//		return (dlen + ft_strlen(src));
-//	while (*src && available_buffer)
-//	{
-//		*dst++ = *src++;
-//		dlen++;
-//		available_buffer--;
-//	}
-//	*dst = '\0';
-//	while (*src++)
-//		dlen++;
-//	return (dlen);
