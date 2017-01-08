@@ -23,6 +23,9 @@ OFILES = \
 		ft_memmove.o\
 		ft_putchar.o\
 		ft_putstr.o\
+		ft_putstr_fd.o\
+		ft_putstr2.o\
+		ft_putstrc.o\
 		ft_memchr.o\
 		ft_memcmp.o\
 		ft_strlen.o\
@@ -51,7 +54,6 @@ OFILES = \
 		ft_strnequ.o\
 		ft_putendl.o\
 		ft_putchar_fd.o\
-		ft_putstr_fd.o\
 		ft_putendl_fd.o\
 		ft_strdel.o\
 		ft_abs.o\
@@ -105,6 +107,9 @@ $(NAME):
 	gcc ${CFLAGS} -c ft_memmove.c
 	gcc ${CFLAGS} -c ft_putchar.c
 	gcc ${CFLAGS} -c ft_putstr.c
+	gcc ${CFLAGS} -c ft_putstr_fd.c
+	gcc ${CFLAGS} -c ft_putstr2.c
+	gcc ${CFLAGS} -c ft_putstrc.c
 	gcc ${CFLAGS} -c ft_memchr.c
 	gcc ${CFLAGS} -c ft_memcmp.c
 	gcc ${CFLAGS} -c ft_strlen.c
@@ -133,7 +138,6 @@ $(NAME):
 	gcc ${CFLAGS} -c ft_strnequ.c
 	gcc ${CFLAGS} -c ft_putendl.c
 	gcc ${CFLAGS} -c ft_putchar_fd.c
-	gcc ${CFLAGS} -c ft_putstr_fd.c
 	gcc ${CFLAGS} -c ft_putendl_fd.c
 	gcc ${CFLAGS} -c ft_strdel.c
 	gcc ${CFLAGS} -c ft_abs.c
