@@ -6,13 +6,13 @@
 /*   By: ewilliam <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/16 08:27:40 by ewilliam          #+#    #+#             */
-/*   Updated: 2016/12/20 12:42:14 by ewilliam         ###   ########.fr       */
+/*   Updated: 2017/01/08 11:27:30 by ewilliam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putcharc(char c, int r, int g, int b)
+static void	ft_putcharc(char c, int r, int g, int b)
 {
 	write(1, "\x1b[38;2;", 7);
 	ft_putnbr(r);
@@ -25,7 +25,7 @@ void	ft_putcharc(char c, int r, int g, int b)
 	write(1, "\x1b[0m", 4);
 }
 
-void	ft_putstrc(const char *s, int r, int g, int b)
+void		ft_putstrc(const char *s, int r, int g, int b)
 {
 	if (s && *s)
 	{
