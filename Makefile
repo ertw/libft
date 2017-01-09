@@ -50,6 +50,7 @@ OFILES = \
 		ft_putnbr_fd.o\
 		ft_putnbrhex.o\
 		ft_itoa.o\
+		ft_itoa_base.o\
 		ft_strequ.o\
 		ft_strnequ.o\
 		ft_putendl.o\
@@ -70,7 +71,7 @@ OFILES = \
 		ft_lstdel.o\
 		ft_lstadd.o\
 		ft_lstiter.o\
-		ft_getplaces.o\
+		ft_countplaces.o\
 		ft_strrev.o\
 		ft_strlcat.o\
 		ft_lstmap.o\
@@ -134,6 +135,7 @@ $(NAME):
 	gcc ${CFLAGS} -c ft_putnbr_fd.c
 	gcc ${CFLAGS} -c ft_putnbrhex.c
 	gcc ${CFLAGS} -c ft_itoa.c
+	gcc ${CFLAGS} -c ft_itoa_base.c
 	gcc ${CFLAGS} -c ft_strequ.c
 	gcc ${CFLAGS} -c ft_strnequ.c
 	gcc ${CFLAGS} -c ft_putendl.c
@@ -154,7 +156,7 @@ $(NAME):
 	gcc ${CFLAGS} -c ft_lstdel.c
 	gcc ${CFLAGS} -c ft_lstadd.c
 	gcc ${CFLAGS} -c ft_lstiter.c
-	gcc ${CFLAGS} -c ft_getplaces.c
+	gcc ${CFLAGS} -c ft_countplaces.c
 	gcc ${CFLAGS} -c ft_strrev.c
 	gcc ${CFLAGS} -c ft_strlcat.c
 	gcc ${CFLAGS} -c ft_lstmap.c

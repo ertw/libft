@@ -1,26 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_getplaces.c                                     :+:      :+:    :+:   */
+/*   ft_itoa_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ewilliam <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/05 14:47:27 by ewilliam          #+#    #+#             */
-/*   Updated: 2016/12/05 21:55:35 by ewilliam         ###   ########.fr       */
+/*   Created: 2017/01/09 11:55:28 by ewilliam          #+#    #+#             */
+/*   Updated: 2017/01/09 12:13:56 by ewilliam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_getplaces(int n)
-{
-	int	places;
+#include "libft.h"
 
-	if (n == 0)
-		return (1);
-	places = 0;
-	while (n)
+char	*ft_itoa_base(int n, const size_t base)
+{
+	char			*sym;
+	char			*arr;
+	char			*head;
+	unsigned long	num;
+
+	sym = "0123456789ABCDEF";
+	num = n;
+	if (!(arr = malloc(sizeof(char)
+					* (ft_countplaces(num, base) + 1))))
+		return (NULL);
+	head = arr;
+	while (num)
 	{
-		n /= 10;
-		places++;
+		*arr++ = *(sym + (num % base));
+		num /= base;
 	}
-	return (places);
+	*arr = '\0';
+	ft_strrev(head, ft_strlen(head));
+	return (head);
 }

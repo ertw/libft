@@ -1,39 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_countplaces.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ewilliam <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/30 14:13:00 by ewilliam          #+#    #+#             */
-/*   Updated: 2016/12/06 18:03:55 by ewilliam         ###   ########.fr       */
+/*   Created: 2016/12/05 14:47:27 by ewilliam          #+#    #+#             */
+/*   Updated: 2016/12/05 21:55:35 by ewilliam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa(int n)
+int	ft_countplaces(int n, const size_t base)
 {
-	int		len;
-	char	*anum;
-	long	lnum;
+	int places;
 
-	len = ft_countplaces(n, 10);
-	anum = malloc(sizeof(char) * (len + (n < 0) + 1));
-	if (!anum)
-		return (NULL);
-	lnum = n;
-	lnum *= n < 0 ? -1 : 1;
-	ft_bzero(anum, len + (n < 0) + 1);
-	if (n < 0)
-		*anum++ = '-';
-	if (lnum == 0)
-		*anum++ = '0';
-	while (lnum)
+	if (n == 0)
+		return (1);
+	places = 0;
+	while (n)
 	{
-		*anum++ = lnum % 10 + '0';
-		lnum /= 10;
+		places++;
+		n /= base;
 	}
-	ft_strrev(anum - len, len);
-	return (anum - len - (n < 0));
+	return (places);
 }
