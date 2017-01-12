@@ -18,9 +18,5 @@ void	ft_putstr2(char **s)
 
 	y = 0;
 	while (s && s[y])
-	{
-		ft_putstr(s[y]);
-		ft_putchar('\n');
-		y++;
-	}
+		ft_putendl(s[y++]);
 }
