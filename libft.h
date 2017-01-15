@@ -24,6 +24,13 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
+typedef struct s_vec
+{
+	size_t	len;
+	size_t	size;
+	char	*str;
+}		t_vec;
+
 int					ft_isupper(int c);
 int					ft_islower(int c);
 int					ft_tolower(int c);
@@ -58,6 +65,7 @@ char				*ft_strstr(const char *big, const char *little);
 char				*ft_strnstr(const char *big, const char *ltl, size_t len);
 char				*ft_strcpy(char *dst, const char *src);
 char				*ft_stpcpy(char *dst, const char *src);
+char				*ft_stpncpy(char *dst, const char *src, size_t len);
 void				ft_putnbr(int n);
 void				ft_putnbr_fd(int n, int fd);
 void				ft_putnbrhex(int n, int len);

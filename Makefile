@@ -46,6 +46,7 @@ OFILES = \
 		ft_strnstr.o\
 		ft_strcpy.o\
 		ft_stpcpy.o\
+		ft_stpncpy.o\
 		ft_putnbr.o\
 		ft_putnbr_fd.o\
 		ft_putnbrhex.o\
@@ -131,6 +132,7 @@ $(NAME):
 	gcc ${CFLAGS} -c ft_strnstr.c
 	gcc ${CFLAGS} -c ft_strcpy.c
 	gcc ${CFLAGS} -c ft_stpcpy.c
+	gcc ${CFLAGS} -c ft_stpncpy.c
 	gcc ${CFLAGS} -c ft_putnbr.c
 	gcc ${CFLAGS} -c ft_putnbr_fd.c
 	gcc ${CFLAGS} -c ft_putnbrhex.c
