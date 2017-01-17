@@ -63,6 +63,7 @@ OFILES = \
 		ft_strnew.o\
 		ft_strsub.o\
 		ft_strjoin.o\
+		ft_strnjoin.o\
 		ft_strtrim.o\
 		ft_wordcount.o\
 		ft_strsplit.o\
@@ -148,6 +149,7 @@ $(NAME):
 	gcc ${CFLAGS} -c ft_strnew.c
 	gcc ${CFLAGS} -c ft_strsub.c
 	gcc ${CFLAGS} -c ft_strjoin.c
+	gcc ${CFLAGS} -c ft_strnjoin.c
 	gcc ${CFLAGS} -c ft_strtrim.c
 	gcc ${CFLAGS} -c ft_wordcount.c
 	gcc ${CFLAGS} -c ft_strsplit.c
