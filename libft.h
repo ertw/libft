@@ -65,7 +65,6 @@ char				*ft_strstr(const char *big, const char *little);
 char				*ft_strnstr(const char *big, const char *ltl, size_t len);
 char				*ft_strcpy(char *dst, const char *src);
 char				*ft_stpcpy(char *dst, const char *src);
-char				*ft_stpncpy(char *dst, const char *src, size_t len);
 void				ft_putnbr(int n);
 void				ft_putnbr_fd(int n, int fd);
 void				ft_putnbrhex(int n, int len);
