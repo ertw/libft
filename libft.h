@@ -6,7 +6,7 @@
 /*   By: ewilliam <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/28 09:07:03 by ewilliam          #+#    #+#             */
-/*   Updated: 2016/12/11 16:26:54 by ewilliam         ###   ########.fr       */
+/*   Updated: 2017/01/17 14:57:58 by ewilliam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,12 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
-typedef struct s_vec
+typedef struct		s_vec
 {
-	size_t	len;
-	size_t	size;
-	char	*str;
-}		t_vec;
+	size_t			len;
+	size_t			size;
+	char			*str;
+}					t_vec;
 
 int					ft_isupper(int c);
 int					ft_islower(int c);
