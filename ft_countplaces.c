@@ -6,7 +6,7 @@
 /*   By: ewilliam <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/05 14:47:27 by ewilliam          #+#    #+#             */
-/*   Updated: 2016/12/05 21:55:35 by ewilliam         ###   ########.fr       */
+/*   Updated: 2017/01/18 12:42:40 by ewilliam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_countplaces(int n, const size_t base)
 {
-	int	places;
+	int		places;
 	long	num;
 
 	num = -1;
