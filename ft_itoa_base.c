@@ -21,8 +21,7 @@ char	*ft_itoa_base(int n, const size_t base)
 
 	sym = "0123456789ABCDEF";
 	num = n;
-	if (!(arr = malloc(sizeof(char)
-					* (ft_countplaces(num, base) + 1))))
+	if (!(arr = ft_strnew(ft_countplaces(num, base))))
 		return (NULL);
 	head = arr;
 	while (num)

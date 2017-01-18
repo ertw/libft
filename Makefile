@@ -83,7 +83,7 @@ OFILES = \
 TEST_SRC = \
 		tests.c
 
-CFLAGS = -Wall -Werror -Wextra #-O3 #-fsanitize=address
+CFLAGS = -Wall -Werror -Wextra -g #-O3 #-fsanitize=address
 
 all: $(NAME)
 

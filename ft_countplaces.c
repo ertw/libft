@@ -14,15 +14,20 @@
 
 int	ft_countplaces(int n, const size_t base)
 {
-	int places;
+	int	places;
+	long	num;
 
+	num = -1;
 	if (n == 0)
 		return (1);
 	places = 0;
-	while (n)
+	num = base == 10 && n < 0
+		? num * n
+		: n;
+	while (num)
 	{
 		places++;
-		n /= base;
+		num /= base;
 	}
 	return (places);
 }
