@@ -27,10 +27,9 @@ static void	ft_putcharc(char c, int r, int g, int b)
 
 void		ft_putstrc(const char *s, int r, int g, int b)
 {
-	if (s && *s)
+	while (s && *s)
 	{
-		ft_putcharc(*s, r, g, b);
-		ft_putstr(++s);
+		ft_putcharc(*s++, r, g, b);
+		write(1, "\x1b[0m", 4);
 	}
-	write(1, "\x1b[0m", 4);
 }
