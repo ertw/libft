@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 
-NAME = libftprintf.a
+NAME = libft.a
 
 TEST_O = test.o
 
@@ -80,17 +80,14 @@ OFILES = \
 		ft_chrcmp.o\
 		ft_strevery.o\
 		ft_streveryi.o\
-		ft_strndup.o\
-		ft_printf.o
-TEST_SRC = \
-		tests.c
+		ft_strndup.o
 
 CFLAGS = -Wall -Werror -Wextra -g #-O3 #-fsanitize=address
 
 all: $(NAME)
 
 tests: $(NAME)
-	gcc ${CFLAGS} -o ${TEST_O} -L. ${NAME} ${TEST_SRC}
+	gcc ${CFLAGS} -o ${TEST_O} -L. ${NAME}
 
 $(NAME):
 	gcc ${CFLAGS} -c ft_islower.c
@@ -169,7 +166,6 @@ $(NAME):
 	gcc ${CFLAGS} -c ft_strevery.c
 	gcc ${CFLAGS} -c ft_streveryi.c
 	gcc ${CFLAGS} -c ft_strndup.c
-	gcc ${CFLAGS} -c ../testing/ft_printf.c
 	ar rc ${NAME} ${OFILES}
 clean:
 	rm -f ${OFILES}
