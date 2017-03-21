@@ -14,9 +14,9 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	if (n)
-	{
-		*(char*)s = '\0';
-		return (ft_bzero(++s, --n));
-	}
+	int len;
+
+	len = n;
+	while (len--)
+		*(char*)s++ = '\0';
 }
