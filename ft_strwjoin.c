@@ -17,8 +17,8 @@
 int	ft_strwjoin(char **old, const char *new, int len)
 {
 	char	*tmp;
-	size_t	old_len;
-	size_t	total_len;
+	int	old_len;
+	int	total_len;
 
 	len = len < 0 ? ft_strlen(new) : len;
 	old_len = *old == NULL
