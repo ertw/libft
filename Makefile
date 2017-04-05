@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 
-NAME = libftprintf.a
+NAME = libft.a
 
 OBJECTS = \
 		ft_islower.o\
@@ -19,7 +19,6 @@ OBJECTS = \
 		ft_bzero.o\
 		ft_memcpy.o\
 		ft_memmove.o\
-		ft_mempmove.o\
 		ft_putchar.o\
 		ft_putstr.o\
 		ft_putstr_fd.o\
@@ -63,8 +62,6 @@ OBJECTS = \
 		ft_strsub.o\
 		ft_strjoin.o\
 		ft_strnjoin.o\
-		ft_strwjoin.o\
-		ft_strwfjoin.o\
 		ft_strtrim.o\
 		ft_wordcount.o\
 		ft_strsplit.o\
@@ -81,18 +78,11 @@ OBJECTS = \
 		ft_strevery.o\
 		ft_streveryi.o\
 		ft_strndup.o\
-		ft_printf.o\
 		ft_wctomb.o\
 		wstrbytelen.o\
 		wstrtombstr.o\
-		printf_parse.o\
-		uitoabase.o\
-		printf_fmt.o\
-		printf_dispatch.o\
-		printf_justify.o\
-		printf_cast.o\
-		ft_wstrlen.o\
-		ft_match_any_char.o
+		ft_wstrlen.o
+
 
 CFLAGS = -Wall -Werror -Wextra -g #-fsanitize=address
 

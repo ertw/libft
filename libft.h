@@ -86,7 +86,6 @@ char				*ft_strnew(size_t size);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strnjoin(char **old, const char *new, size_t len);
-int					ft_strwjoin(char **old, const char *new, int len);
 char				*ft_strtrim(char const *s);
 char				**ft_strsplit(char const *s, char c);
 unsigned int		ft_wordcount(const char *s, const char c, unsigned int ct);
@@ -110,4 +109,5 @@ int					ft_strevery2i(char **ar, int (*f)(char c, int x, int y));
 int					ft_streveryi(char *ar, int (*f)(char c, int index));
 char				*ft_strndup(const char *s1, size_t len);
 int					ft_printf(const char *format, ...);
+int					ft_wctomb(char *s, wchar_t wchar);
 #endif
