@@ -110,4 +110,5 @@ int					ft_streveryi(char *ar, int (*f)(char c, int index));
 char				*ft_strndup(const char *s1, size_t len);
 int					ft_printf(const char *format, ...);
 int					ft_wctomb(char *s, wchar_t wchar);
+int					get_next_line(const int fd, char **line);
 #endif
