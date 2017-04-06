@@ -85,14 +85,14 @@ OBJECTS = \
 		get_next_line.o
 
 
-CFLAGS = -Wall -Werror -Wextra -g #-fsanitize=address
+CFLAGS = -Wall -Werror -Wextra -g -fno-omit-frame-pointer -fsanitize=address
 
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
 	ar -rcs $(NAME) $(OBJECTS)
 %.o: %.c
-	$(CC) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 clean:
 	rm -f $(OBJECTS)
 fclean: clean
