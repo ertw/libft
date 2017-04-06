@@ -81,7 +81,8 @@ OBJECTS = \
 		ft_wctomb.o\
 		wstrbytelen.o\
 		wstrtombstr.o\
-		ft_wstrlen.o
+		ft_wstrlen.o\
+		get_next_line.o
 
 
 CFLAGS = -Wall -Werror -Wextra -g #-fsanitize=address
