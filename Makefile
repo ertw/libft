@@ -83,8 +83,12 @@ OBJECTS = \
 		wstrtombstr.o\
 		ft_wstrlen.o
 
-
-CFLAGS = -Wall -Werror -Wextra#-g -fno-omit-frame-pointer -fsanitize=address
+ifeq ($(mode),release)
+	CFLAGS = -Wall -Werror -Wextra -g
+else
+	mode = debug
+	CFLAGS = -Wall -Werror -Wextra -g -fno-omit-frame-pointer -fsanitize=address
+endif
 
 all: $(NAME)
 
