@@ -84,7 +84,7 @@ OBJECTS = \
 		ft_wstrlen.o
 
 
-CFLAGS = -Wall -Werror -Wextra -g -fno-omit-frame-pointer -fsanitize=address
+CFLAGS = -Wall -Werror -Wextra#-g -fno-omit-frame-pointer -fsanitize=address
 
 all: $(NAME)
 
