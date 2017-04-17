@@ -81,7 +81,8 @@ OBJECTS = \
 		ft_wctomb.o\
 		wstrbytelen.o\
 		wstrtombstr.o\
-		ft_wstrlen.o
+		ft_wstrlen.o\
+		get_next_line.o
 
 ifeq ($(mode),release)
 	CFLAGS = -Wall -Werror -Wextra -g
