@@ -84,19 +84,12 @@ OBJECTS = \
 		ft_wstrlen.o\
 		get_next_line.o
 
-ifeq ($(mode),release)
-	CFLAGS = -Wall -Werror -Wextra -g
-else
-	mode = debug
-	CFLAGS = -Wall -Werror -Wextra -g -fno-omit-frame-pointer -fsanitize=address
-endif
+CFLAGS = -Wall -Werror -Wextra -g -fno-omit-frame-pointer -fsanitize=address
 
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
 	ar -rcs $(NAME) $(OBJECTS)
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
 clean:
 	rm -f $(OBJECTS)
 fclean: clean
