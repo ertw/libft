@@ -10,15 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*joins strings, and returns the len*/
+/*
+** joins strings, and returns the len
+*/
 
 #include "libft.h"
 
 int	ft_strwjoin(char **old, const char *new, int len)
 {
 	char	*tmp;
-	int	old_len;
-	int	total_len;
+	int		old_len;
+	int		total_len;
 
 	len = len < 0 ? (int)ft_strlen(new) : len;
 	old_len = *old == NULL
