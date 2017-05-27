@@ -82,7 +82,8 @@ OBJECTS = \
 		wstrbytelen.o\
 		wstrtombstr.o\
 		ft_wstrlen.o\
-		get_next_line.o
+		get_next_line.o\
+		get_delim.o
 
 CFLAGS = -Wall -Werror -Wextra -g -fno-omit-frame-pointer -fsanitize=address
 
